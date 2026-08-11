@@ -1,50 +1,74 @@
+@charset "UTF-8";
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #333;
+.hero {
+    background-image: url("https://picsum.photos/200/300");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    padding: 1em;
-    text-align: center;
 }
 
-header nav ul {
+.hero h1 {
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.nav {
+    background-color: #333;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+}
+
+.nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-header nav ul li {
-    display: inline-block;
+.nav li {
     margin-right: 20px;
 }
 
-header nav a {
+.nav a {
     color: #fff;
     text-decoration: none;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-}
-
-section {
-    background-color: #f7f7f7;
-    padding: 1em;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer {
+.footer {
     background-color: #333;
-    color: #fff;
     padding: 1em;
     text-align: center;
-    clear: both;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .nav {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        height: 30vh;
+    }
 }
