@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Startup Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <h1 class="hero-headline">Unlock Your Potential</h1>
+        <button class="hero-btn">Get Started</button>
+    </section>
+    <!-- Feature Cards Grid -->
+    <section class="features-container">
+        <div class="feature-card">
+            <i class="fas fa-lock"></i>
+            <h2>Feature 1</h2>
+            <p>Describe feature 1</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-globe"></i>
+            <h2>Feature 2</h2>
+            <p>Describe feature 2</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-cog"></i>
+            <h2>Feature 3</h2>
+            <p>Describe feature 3</p>
+        </div>
+    </section>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="dark-mode-toggle">Toggle Dark Mode</div>
+    <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    let isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    darkModeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', isDarkMode);
+    });
+    </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Tech Startup</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
